@@ -2,7 +2,14 @@ type Maybe<T> = T | null
 
 
 
-
+type BoxProfile = {
+  name: string|null,
+  description: string|null,
+  location: string|null,
+  job: string|null,
+  emoji: string|null,
+  imageUrl: string|null,
+}
 
 type UpdateBoxProfileResponse = {
   success: boolean
