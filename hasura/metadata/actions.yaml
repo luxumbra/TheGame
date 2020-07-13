@@ -1,4 +1,11 @@
 actions:
+- name: getBoxProfile
+  definition:
+    kind: ""
+    handler: '{{ACTION_BASE_ENDPOINT}}/getBoxProfile'
+  permissions:
+  - role: player
+  - role: public
 - name: updateBoxProfile
   definition:
     kind: synchronous
@@ -11,4 +18,5 @@ custom_types:
   input_objects: []
   objects:
   - name: UpdateBoxProfileResponse
+  - name: BoxProfile
   scalars: []
