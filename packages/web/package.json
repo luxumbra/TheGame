@@ -1,0 +1,22 @@
+{
+  "name": "@metafam/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build && next export",
+    "start": "next start",
+    "typecheck": "tsc",
+    "precommit": "yarn lint-staged"
+  },
+  "dependencies": {
+    "@metafam/ds": "0.1.0",
+    "graphql": "^15.0.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "latest",
+    "next-google-fonts": "^1.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "urql": "^1.9.7"
+  }
+}

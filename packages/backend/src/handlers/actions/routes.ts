@@ -1,14 +1,14 @@
 import express from 'express';
 
 import { asyncHandlerWrapper } from '../../lib/apiHelpers';
+import { getBoxProfile } from './getBoxProfile/handler';
+import { updateBoxProfileHandler } from './updateBoxProfile/handler';
 
-import getBoxProfile from './getBoxProfile/handler';
-import updateBoxProfileHandler from './updateBoxProfile/handler';
+export const actionRoutes = express.Router();
 
-const router = express.Router();
+actionRoutes.post('/getBoxProfile', asyncHandlerWrapper(getBoxProfile));
 
-router.post('/getBoxProfile', asyncHandlerWrapper(getBoxProfile));
-
-router.post('/updateBoxProfile', asyncHandlerWrapper(updateBoxProfileHandler));
-
-export default router;
+actionRoutes.post(
+  '/updateBoxProfile',
+  asyncHandlerWrapper(updateBoxProfileHandler),
+);
