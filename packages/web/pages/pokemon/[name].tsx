@@ -37,9 +37,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<Props, { name: string }> = async (
-  context,
-) => {
+export const getStaticProps: GetStaticProps<
+  Props,
+  { name: string }
+> = async context => {
   const name = context.params?.name;
   const pokemon = await getPokemon(name);
 

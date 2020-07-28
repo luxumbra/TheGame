@@ -6,17 +6,9 @@ actions:
       forward_client_headers: true
     permissions:
       - role: player
-  - name: getBoxProfile
-    definition:
-      kind: ''
-      handler: '{{ACTION_BASE_ENDPOINT}}/getBoxProfile'
-    permissions:
-      - role: player
-      - role: public
 custom_types:
   enums: []
   input_objects: []
   objects:
     - name: UpdateBoxProfileResponse
-    - name: BoxProfile
   scalars: []
