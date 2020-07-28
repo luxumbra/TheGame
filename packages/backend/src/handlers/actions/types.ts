@@ -1,6 +1,7 @@
 type Maybe<T> = T | null;
 
 type BoxProfile = {
+  ethereumAddress: string | null;
   name: string | null;
   description: string | null;
   location: string | null;

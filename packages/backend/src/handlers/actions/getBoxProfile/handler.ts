@@ -7,11 +7,13 @@ export const getBoxProfile = async (req: Request, res: Response) => {
   const { address } = req.body.input;
   const boxProfile = await Box.getProfile(address);
 
+  console.log(boxProfile);
   if (Object.keys(boxProfile).length === 0) {
     return res.json({});
   }
 
   const parsedProfile: BoxProfile = {
+    ethereumAddress: address,
     name: boxProfile.name,
     description: boxProfile.description,
     location: boxProfile.location,
